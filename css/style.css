@@ -1,13 +1,11 @@
  body {
             font-family: 'Inter', sans-serif;
             background-color: #0d1a2d;
-            color: #e2e8f0;
+            color: yellow;
             line-height: 1.6;
-        }
+
         .header-bg {
-            background-image: url('/img/hbg.png');
-            background-size: contain;
-            background-position: center;
+            background: url('/img/hbg.png') center center / contain no-repeat;
             position: relative;
         }
         .header-bg::after {
@@ -34,4 +32,46 @@
         .modal-content {
             max-height: 80vh;
             overflow-y: auto;
+        }
+    }
+        a {
+            color: yellow;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .form-control {
+            background-color: #1a2a43;
+            border: 1px solid #ccc;
+            color: yellow;
+        }
+        .form-control:focus {
+            background-color: #1a2a43;
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            color: yellow;
+        }
+        .navbar {
+            background-color: #1a2a43;
+        }
+        .highlight {
+            display: inline-block;
+            background: linear-gradient(90deg, #ffeb3b 60%, #ffd700 100%);
+            color: #0d1a2d;
+            font-weight: bold;
+            padding: 0.3em 0.7em;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(255, 235, 59, 0.15);
+            margin: 0.2em 0;
+            font-size: 1.15em;
+            letter-spacing: 0.03em;
         }
