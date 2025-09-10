@@ -5,7 +5,7 @@
             line-height: 1.6;
         }
         .header-bg {
-            background-image: url('img/header-background.jpg');
+            background-image: url('/img/header-background.jpg');
             background-size: cover;
             background-position: center;
             position: relative;
