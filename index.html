@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Guardião Cibernético 7.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="header-bg py-24 md:py-32 flex flex-col items-center justify-center text-center text-white">
+        <div class="px-6 header-content">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-4">
+                <!-- Embedded image using Base64 for reliability in preview -->
+                <img src="img/CMN3.png" alt="Logo CMN" class="w-16 h-16 md:w-20 md:h-20 ">
+                <!-- Embedded image using Base64 for reliability in preview -->
+                <img src="img/logo-dti.png" alt="Logo DTI" class="w-16 h-16 md:w-20 md:h-20">
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">Exercício Guardião Cibernético 7.0</h1>
+            <p class="text-lg md:text-xl">HUB BELÉM</p>
+            <p class="text-sm md:text-base">15 a 17 de Setembro</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <!-- Schedule Cards Section -->
+        <div class="grid md:grid-cols-4 gap-8">
+            <!-- Card for Day 1 -->
+            <div class="card rounded-lg overflow-hidden flex flex-col items-center p-6 text-center text-white">
+                <div class="text-5xl mb-4" style="color: #FFC107;">&#x1F4C6;</div>
+                <h2 class="text-2xl font-bold mb-2">Dia 1</h2>
+                <p class="text-gray-300 mb-4">15 de Setembro (Segunda-feira)</p>
+                <p class="text-sm text-gray-400 flex-grow mb-4">Recepção, cerimônia de abertura e palestras sobre segurança cibernética.</p>
+                <button onclick="openModal('day1')" class="bg-[#1a2a43] text-white font-medium py-2 px-6 rounded-full border border-yellow-400 hover:bg-yellow-400 hover:text-black transition duration-300">
+                    Ver Atividades
+                </button>
+            </div>
+            <!-- Card for Day 2 -->
+            <div class="card rounded-lg overflow-hidden flex flex-col items-center p-6 text-center text-white">
+                <div class="text-5xl mb-4" style="color: #4CAF50;">&#x1F50F;</div>
+                <h2 class="text-2xl font-bold mb-2">Dia 2</h2>
+                <p class="text-gray-300 mb-4">16 de Setembro (Terça-feira)</p>
+                <p class="text-sm text-gray-400 flex-grow mb-4">Simulação construtiva e virtual para ambientação dos participantes.</p>
+                <button onclick="openModal('day2')" class="bg-[#1a2a43] text-white font-medium py-2 px-6 rounded-full border border-yellow-400 hover:bg-yellow-400 hover:text-black transition duration-300">
+                    Ver Atividades
+                </button>
+            </div>
+            <!-- Card for Day 3 -->
+            <div class="card rounded-lg overflow-hidden flex flex-col items-center p-6 text-center text-white">
+                <div class="text-5xl mb-4" style="color: #2196F3;">&#x1F4BB;</div>
+                <h2 class="text-2xl font-bold mb-2">Dia 3</h2>
+                <p class="text-gray-300 mb-4">17 de Setembro (Quarta-feira)</p>
+                <p class="text-sm text-gray-400 flex-grow mb-4">Execução do exercício com agravamento da crise cibernética.</p>
+                <button onclick="openModal('day3')" class="bg-[#1a2a43] text-white font-medium py-2 px-6 rounded-full border border-yellow-400 hover:bg-yellow-400 hover:text-black transition duration-300">
+                    Ver Atividades
+                </button>
+            </div>
+            <!-- Card for Day 4 -->
+            <div class="card rounded-lg overflow-hidden flex flex-col items-center p-6 text-center text-white">
+                <div class="text-5xl mb-4" style="color: #FF7043;">&#x1F37D;</div>
+                <h2 class="text-2xl font-bold mb-2">Todos os Dias</h2>
+                <p class="text-gray-300 mb-4">Almoço</p>
+                <p class="text-sm text-gray-400 flex-grow mb-4">Ver localização.</p>
+                <button onclick="showImage(src)" class="bg-[#1a2a43] text-white font-medium py-2 px-6 rounded-full border border-yellow-400 hover:bg-yellow-400 hover:text-black transition duration-300">
+                    Ver Atividades
+                </button>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Modal for each day -->
+    <div id="modal-container" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50">
+        <div class="bg-gray-800 text-white rounded-lg shadow-xl w-full max-w-2xl modal-content transform transition-transform duration-300 scale-95">
+            <div class="flex justify-between items-center p-4 border-b border-gray-700">
+                <h3 id="modal-title" class="text-2xl font-bold"></h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white transition duration-300 text-3xl leading-none">&times;</button>
+            </div>
+            <div id="modal-body" class="p-6">
+                <!-- Schedule will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 text-center">
+        <a href="https://www.google.com/maps/search/?api=1&query=R.+Jo%C3%A3o+Diogo,+458+-+Campina,+Bel%C3%A9m+-+PA,+66015-175" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition duration-300">
+            Guarnição: R. João Diogo, 458 - Campina, Belém - PA, 66015-175
+        </a>
+        <p class="text-sm text-gray-400 mt-2">Cooperar - Integrar</p>
+        <p class="text-xs text-gray-500 mt-4">&copy; 2025 DTI. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
+
