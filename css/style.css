@@ -5,7 +5,13 @@
             line-height: 1.6;
 
         .header-bg {
+<<<<<<< HEAD
             background: url('/img/hbg.png') center center / contain no-repeat;
+=======
+            background-image: url('img/hbg.png');
+            background-size: contain;
+            background-position: center;
+>>>>>>> e1409e59d93dd2256fdd4d876c9c200519fe2bee
             position: relative;
         }
         .header-bg::after {
